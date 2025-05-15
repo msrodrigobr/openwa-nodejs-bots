@@ -1,0 +1,13 @@
+version: "3.5"
+services:
+  whatsapp:
+    image: hawabot:latest
+    container_name: hawabot
+    restart: always
+    environment:
+      - PATH_SESSION=/session
+    volumes:
+      - ./session:/session
+      - ./src:/app
+    ports:
+      - 9229:9229
